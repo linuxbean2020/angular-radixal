@@ -1,0 +1,5 @@
+<div class="row tables">
+  <div class="col" *ngFor="let tb of tableData">
+    <app-table [data]="tb" [tableName]="tb.tableName"></app-table>
+  </div>
+</div>

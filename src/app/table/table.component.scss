@@ -1,0 +1,7 @@
+table tr td:not(:last-child){
+    border-right:1px solid; 
+}
+
+table tbody tr:nth-child(5),table tbody tr:nth-child(7){
+    border-bottom: 2px solid;
+}
