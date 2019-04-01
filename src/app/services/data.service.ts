@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams ,HttpErrorResponse  } from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import { catchError, retry } from 'rxjs/operators';
+import { TableData } from '../models/table.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +12,7 @@ export class DataService {
 
   getData(data:any){      
     const options = data ? this.buildQuery(data) : {};      
-    return this._http.get(`${this.apiBase}/subset_overview`,options);
+    return this._http.get<TableData>(`${this.apiBase}/subset_overview`,options);
     
   }
 

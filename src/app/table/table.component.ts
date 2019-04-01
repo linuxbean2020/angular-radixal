@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TableData } from '../models/table.model';
 
 @Component({
   selector: 'app-table',
@@ -6,10 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  @Input() data:any;
+  @Input() data:TableData;
   @Input() tableName:String;
   constructor() { }
-
   ngOnInit() {
   }
 
